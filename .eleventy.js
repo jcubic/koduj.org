@@ -1,4 +1,6 @@
 const { DateTime } = require("luxon");
+const { format: dateFormat } = require("date-fns");
+
 // Import Nunjucks   
 //const Nunjucks = require("nunjucks");
 // excerpt of my .eleventy.js config file
@@ -22,6 +24,9 @@ module.exports = function(eleventyConfig) {
   //Latests Summary Limit
   eleventyConfig.addFilter("limit_latest", function (arr, limit) {
     return arr.slice(0, limit);
+  });
+  eleventyConfig.addFilter("format", function (date, format) {
+    return dateFormat(date, format);
   });
   //Post Summary Limit
   eleventyConfig.addFilter("limit", function (arr, limit) {

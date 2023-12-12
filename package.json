@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "bufferutil": "^4.0.5",
+    "date-fns": "^2.30.0",
     "speedlify-score": "^2.0.2",
     "utf-8-validate": "^5.0.7"
   },
